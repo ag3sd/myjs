@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interpolation</title>
+
+</head>
+
+<body>
+    {{kk}}
+    <h1 id="rep">Testing {{kk}}</h1>
+    <table id="rep">
+        <tr>
+            <th>head{{kk}}</th>
+        </tr>
+        <tr agrepeat="i in k">
+            <td id="rep">hai{{fish}}</td>
+        </tr>
+    </table>
+    {{obj.b.n.h.j.a.A}}
+    
+    <h1 id="{{kk}}"></h1>
+
+    <button type="button" onclick="">click</button>
+ 
+    <script src="./ag3sd.js"></script>
+    
+<script>
+    $scope.kk = 10;
+    $scope.fish = "nice";
+    $scope.obj = {};
+
+    $scope.obj = { b: { n: { h: { j: { a: { A: 50 } } } } } };
+</script>
+<script>
+        document.onload=init();
+    </script>
+</body>
+
+</html>

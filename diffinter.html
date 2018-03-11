@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diff inter</title>
+
+</head>
+
+<body>
+   <span id="{{kk}}"></span> 
+    <h1 id="rep">Testing <span id="{{kk}}"></span> </h1>
+    <table id="rep">
+        <tr>
+            <th>head<span id="{{kk}}"></span> </th>
+        </tr>
+        <tr agrepeat="i in k">
+            <td id="rep">hai<span id="{{fish}}"></span></td>
+        </tr>
+    </table>
+    <span id="{{obj.b.n.h.j.a.A}}"></span>
+    <h1 id="{{kk}}"></h1>
+
+    <button type="button" onclick="newin()">click</button>
+</body>
+<script>
+
+    var $scope = {};
+    $scope.kk = 10;
+    $scope.fish = "nice";
+    $scope.obj = {};
+
+    $scope.obj = { b: { n: { h: { j: { a: { A: 50 } } } } } };
+    var prev = "";
+    
+    show($scope);
+    function show(obj) {
+
+        Object.keys(obj).forEach(function (item) {
+            //console.log(obj[''+item+'']);
+            //console.log(''+item+'');
+            //console.log(prev);
+            if (typeof obj['' + item + ''] == "object") {
+                prev += item + ".";
+
+                show(obj['' + item + '']);
+
+                prev = "";
+            }
+            else {
+               document.getElementById("{{" + prev + "" + item + "}}").innerHTML=obj['' + item + ''];
+               
+            }
+
+        });
+
+    }
+</script>
+
+
+</html>

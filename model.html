@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Model</title>
+</head>
+<body>
+    <input type="text"  agmodel="fname">
+    
+    <span id="{{fname}}"></span><br/>
+    <span id="{{fname}}">k</span>
+
+    <h1 id="{{h}}">hai</h1>
+    <h2 id="{{h}}">bye</h2>   
+    <button type="button" onclick="show()">click</button>
+    
+    <script src="./ag3sd.js"></script>
+    <script>
+        document.onload=init();
+        $scope.kk="hao";
+        function show()
+        {
+            console.log(document.querySelectorAll("[id*='{{h}}']")[0].innerHTML);
+        }
+    </script>
+     
+     
+</body>
+</html>
